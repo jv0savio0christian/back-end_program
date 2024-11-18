@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function numero(){
+            n = parseInt(prompt('Digite um número'));
+            for (let i = 1; i <= n; i++) {
+               document.getElementById("minhadiv").innerHTML += i + '<br>';
+            }
+        }
+    </script>
+</head>
+<body>
+    <H1>Contagem de números</H1><br><br>
+    <button onclick="numero()">Escrever</button><br><br>
+    <div id="minhadiv"></div>
+    
+</body>
+</html>
