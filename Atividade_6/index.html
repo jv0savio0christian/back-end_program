@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+    <script>
+        function escreveDiv(texto){
+            document.getElementById("minhaDiv").innerHTML = texto;
+        }
+        function escreveDiv2(){
+            texto = prompt('Digite um texto qualquer');
+            document.getElementById("minhaDiv2").innerHTML = texto;
+        }
+    </script>
+</head>
+<body>
+    <h1><b>Raiz Quadrada</b></h1> <br>
+    <button onclick="escreveDiv('<h1> Programação Web </h1>')">Escrever</button><br> <br>
+    <div id="minhaDiv"></div>
+    <hr>
+    <h1>Escrevendo um Texto Dinâmico</h1>
+    <button onclick="escreveDiv2()">Escrever</button><br><br>
+    <div id="minhaDiv2"></div>
+</body>
+</html>
