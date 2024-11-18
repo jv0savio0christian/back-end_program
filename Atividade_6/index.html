@@ -12,6 +12,12 @@
             texto = prompt('Digite um texto qualquer');
             document.getElementById("minhaDiv2").innerHTML = texto;
         }
+        
+        function quadrado(arg){
+            var raiz = Math.sqrt(arg);
+            alert("A raiz quadrada desse número é: "+raiz)
+
+        }
     </script>
 </head>
 <body>
@@ -22,5 +28,10 @@
     <h1>Escrevendo um Texto Dinâmico</h1>
     <button onclick="escreveDiv2()">Escrever</button><br><br>
     <div id="minhaDiv2"></div>
+    <hr>
+    <h1>Raiz Quadrada</h1><br><br>
+    <button onclick="quadrado(25)">Raiz de 25</button><br><br>
+    <button onclick="quadrado(36)">Raiz de 36</button><br><br>
+    <button onclick="quadrado(49)">Raiz de 49</button><br><br>
 </body>
 </html>
