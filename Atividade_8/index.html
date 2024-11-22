@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let linguagens = Array();
+        linguagens[0] = "Dart";
+        linguagens[1] = "PHP";
+        linguagens[2] = "Java";
+        linguagens[3] = "Python";
+        linguagens[4] = "Perl";
+        linguagens[5] = "Ruby on Rails";
+        linguagens[6] = "C ++";
+
+        function mostrarListaLinguagens(){
+            const container = document.getElementById("minhaDiv");
+            for (var i = 0;i < linguagens.length; i++){
+                var tag = "<h5>"+i+" - "+linguagens[i]+"</h5>";
+                container.innerHTML+=tag;
+            }
+        }
+
+        function posicaoLinguagens(){
+            var indice = prompt("Qual posição da lista deseja continuar?");
+            alert(linguagens[indice]);
+        }
+
+        let frutas = Array();
+        frutas[0] = "Maçã";
+        frutas[1] = "Banana";
+        frutas[2] = "Melancia";
+        frutas[3] = "Manga";
+        frutas[4] = "Abacaxi";
+        frutas[5] = "Uva";
+        frutas[6] = "Laranja";
+
+        function mostrarListafrutas(){
+            const container = document.getElementById("minhaDiv2");
+            for (var i = 0;i < frutas.length; i++){
+                var tag = "<h5>"+i+" - "+frutas[i]+"</h5>";
+                container.innerHTML+=tag;
+            }
+        }
+
+        function posicaofrutas(){
+            var indice = prompt("Qual posição da lista deseja continuar?");
+            alert(frutas[indice]);
+        }
+        </script>
+</head>
+<body>
+    <h1>Array  de Linguagens</h1>
+    <button onclick="mostrarListaLinguagens()">Criar Array</button><br><br>
+    <button onclick="posicaoLinguagens()">Posição no Array</button>
+    <div id="minhaDiv"></div>
+    <hr>
+    <h1>Array  de Frutas</h1>
+    <button onclick="mostrarListafrutas()">Criar Array</button><br><br>
+    <button onclick="posicaofrutas()">Posição no Array</button>
+    <div id="minhaDiv2"></div>
+    <hr>
+</body>
+</html>
