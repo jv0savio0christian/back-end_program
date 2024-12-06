@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let listaPessoas = Array();
+        function adicionarPessoa() {
+            var nome=prompt('Digite o nome da pessoa a ser adicionada')
+            listaPessoas.push(nome);
+            mostrarListapessoas();
+        }
+
+        function limparListapessoas(){
+            const container = document.getElementById("minhaDiv");
+            container.innerHTML = '';
+            listaPessoas.length=0;
+        }
+
+        function mostrarListapessoas(){
+            const container = document.getElementById("minhaDiv");
+            container.innerHTML = '';
+            console.log(listaPessoas);
+            for (var i = 0;i < listaPessoas.length; i++){
+                var tag = "<h5>"+i+" - "+listaPessoas[i]+"</h5>";
+                container.innerHTML+=tag;
+            }
+        }        
+        
+        function removerPessoas(){
+            var pessoa= alert('A última pessoa removida foi: '+listaPessoas.pop());
+            mostrarListapessoas();
+         }
+
+    </script>
+</head>
+<body>
+    <h1>Lista de pessoas</h1>
+    <button onclick="adicionarPessoa()">Adicionar Pessoa</button>
+    <button onclick="removerPessoas()">Remover Pessoa</button>
+    <button onclick="limparListapessoas()">Limpar</button>
+    <br>
+    <div id="minhaDiv"></div>
+</body>
+</html>
