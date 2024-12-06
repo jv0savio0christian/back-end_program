@@ -20,13 +20,17 @@
                 var tag = "<h5>"+i+" - "+linguagens[i]+"</h5>";
                 container.innerHTML+=tag;
             }
-        }
-
+        }        
+        
         function posicaoLinguagens(){
             var indice = prompt("Qual posição da lista deseja continuar?");
             alert(linguagens[indice]);
         }
-
+        function Limparlinguagens(){
+            const container = document.getElementById("minhaDiv");
+            container.innerHTML = '';
+            linguagens.length=0;
+        }
         let frutas = Array();
         frutas[0] = "Maçã";
         frutas[1] = "Banana";
@@ -41,24 +45,31 @@
             for (var i = 0;i < frutas.length; i++){
                 var tag = "<h5>"+i+" - "+frutas[i]+"</h5>";
                 container.innerHTML+=tag;
-            }
+            }       
         }
 
         function posicaofrutas(){
             var indice = prompt("Qual posição da lista deseja continuar?");
             alert(frutas[indice]);
         }
+        function Limparfrutas(){
+            const container = document.getElementById("minhaDiv2");
+            container.innerHTML = '';
+            frutas.length=0;
+        }
         </script>
 </head>
 <body>
     <h1>Array  de Linguagens</h1>
-    <button onclick="mostrarListaLinguagens()">Criar Array</button><br><br>
+    <button onclick="mostrarListaLinguagens()">Criar Array</button>
     <button onclick="posicaoLinguagens()">Posição no Array</button>
+    <button onclick="Limparlinguagens()">Limpar</button>
     <div id="minhaDiv"></div>
     <hr>
     <h1>Array  de Frutas</h1>
-    <button onclick="mostrarListafrutas()">Criar Array</button><br><br>
+    <button onclick="mostrarListafrutas()">Criar Array</button>
     <button onclick="posicaofrutas()">Posição no Array</button>
+    <button onclick="Limparfrutas()">Limpar</button>
     <div id="minhaDiv2"></div>
     <hr>
 </body>
